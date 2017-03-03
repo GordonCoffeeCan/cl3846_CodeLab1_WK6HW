@@ -46,8 +46,8 @@ public class LevelLoader : MonoBehaviour {
 
                 for (int xPos = 0; xPos < line.Length; xPos++) {
                     if (line[xPos] == 'x') {
-                        GameObject _wall = Instantiate(Resources.Load("Prefabs/Wall") as GameObject);
-                        _wall.transform.position = new Vector3(xPos + offSetX, i + 0.5f, yPos + offSetY);
+                        GameObject _wall = Instantiate(Resources.Load("Prefabs/Crate") as GameObject);
+                        _wall.transform.position = new Vector3(xPos + offSetX, i, yPos + offSetY);
                     } else if (line[xPos] == 't' && i == 0) {
                         GameObject _target = Instantiate(Resources.Load("Prefabs/Target") as GameObject);
                         Rigidbody _targetRig = _target.GetComponent<Rigidbody>();
